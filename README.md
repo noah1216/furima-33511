@@ -70,13 +70,12 @@
 
 | Column       | Type       | Options     |
 | ------------ | ---------- | ----------- |
-| phone_number | integer    | null: false |
 | postal_code  | string     | null: false |
-| state        | integer    | null: false |
+| prefectures  | integer    | null: false |
 | municipality | string     | null: false |
-| address      | string     | 
+| house_number | string     | 
 | buy_id       | references | null: false ,foreign_key: true |
-
+| phone_number | integer    | null: false |
 
 ### Association
 
