@@ -26,17 +26,17 @@
 
 ## items テーブル
 
-| Column            | Type       | Options     |
+| Column              | Type       | Options     |
 | ------------------  | ---------- | ----------- |
 | name                | string     | null: false |
 | text                | text       | null: false |
 | category_id         | integer    | null: false |
 | state_id            | integer    | null: false |
 | area_id             | integer    | null: false |
-| shopping_charge_id | integer    | null: false |
-| day_id             | integer    | null: false |
-| pricce              | integer    | null: false |
-| user             | references | null: false, foreign_key: true     |
+| shopping_charge_id  | integer    | null: false |
+| shopping_day_id     | integer    | null: false |
+| price               | integer    | null: false |
+| user                | references | null: false, foreign_key: true     |
 
 
 ### Association
@@ -72,8 +72,9 @@
 | postal_code  | string     | null: false |
 | area_id      | integer    | null: false |
 | municipality | string     | null: false |
-| house_number | string     | 
-| buy       | references | null: false ,foreign_key: true |
+|block number  | string     | null: false |
+| house_number | string     | null: false |
+| buy          | references | null: false ,foreign_key: true |
 | phone_number | string     | null: false |
 
 ### Association
