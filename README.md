@@ -73,7 +73,7 @@
 | area_id      | integer    | null: false |
 | municipality | string     | null: false |
 | block number | string     | null: false |
-| house_number | string     | null: false |
+| house_number | string     |             |
 | buy          | references | null: false ,foreign_key: true |
 | phone_number | string     | null: false |
 
