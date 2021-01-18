@@ -16,7 +16,7 @@
 ### Association
 
 - has_many :items
-- has_one :buys
+- has_one :buy
 
 
 
@@ -33,10 +33,10 @@
 | category_id         | integer    | null: false |
 | state_id            | integer    | null: false |
 | area_id             | integer    | null: false |
-| shopping_charges_id | integer    | null: false |
-| days_id             | integer    | null: false |
+| shopping_charge_id | integer    | null: false |
+| day_id             | integer    | null: false |
 | pricce              | integer    | null: false |
-| user_id             | references | null: false, foreign_key: true     |
+| user             | references | null: false, foreign_key: true     |
 
 
 ### Association
@@ -50,10 +50,10 @@
 
 ## buys テーブル
 
-| Column        | Type       | Options                       |
-| ------------- | ---------- | ----------------------------- |
-| user_id       | references| null: false ,foreign_key: true |
-| item_id       | references| null: false ,foreign_key: true |
+| Column     | Type       | Options                       |
+| ---------- | ---------- | ----------------------------- |
+| user       | references| null: false ,foreign_key: true |
+| item       | references| null: false ,foreign_key: true |
 
 ### Association
 
@@ -73,7 +73,7 @@
 | area_id      | integer    | null: false |
 | municipality | string     | null: false |
 | house_number | string     | 
-| buy_id       | references | null: false ,foreign_key: true |
+| buy       | references | null: false ,foreign_key: true |
 | phone_number | string     | null: false |
 
 ### Association
