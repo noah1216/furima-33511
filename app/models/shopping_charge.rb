@@ -1,0 +1,2 @@
+class ShoppingCharge < ApplicationRecord
+end
