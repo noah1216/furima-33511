@@ -8,6 +8,11 @@ class Item < ApplicationRecord
   belongs_to :shopping_day
 
 
+
+  validates :name, presence: true
+  validates :text, presence: true
+  validates :price, presence: true
+
   with_options numericality: { other_than: 1 } do
     validates :category_id
     validates :state_id
