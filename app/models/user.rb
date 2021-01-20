@@ -5,14 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,100}+\z/i}
-  validates :nickname
-  validates :family_name
-  validates :first_name
-  validates :family_name_kana
-  validates :first_name_kana
-  validates :birthday
-
-
 
   with_options presence: true do
     validates :password
