@@ -10,10 +10,9 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
 
+  validates :price, format: { with: /\A[0-9]+\z/ },
+                    numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
 
-
-  validates :price, format: { with: /\A[0-9]+\z/}, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 }
-  
   with_options presence: true do
     validates :image
     validates :name
