@@ -14,7 +14,7 @@ class Item < ApplicationRecord
   
   validates :name, presence: true
   validates :text, presence: true
-  validates :price, presence: true
+  validates :price, presence: true, format: { with: /\A[0-9]+\z/}, length: { minimum: 300 }, length: { maximum: 9999999 }
 
   with_options numericality: { other_than: 0 } do
     validates :category_id
