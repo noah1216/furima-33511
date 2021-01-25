@@ -16,7 +16,7 @@
 ### Association
 
 - has_many :items
-- has_many :buys
+- has_many :orders
 
 
 
@@ -42,13 +42,13 @@
 ### Association
 
 - belong_to :user
-- has_one :buy
+- has_one :order
 
 
 
 
 
-## buys テーブル
+## order テーブル
 
 | Column     | Type       | Options                       |
 | ---------- | ---------- | ----------------------------- |
@@ -74,7 +74,7 @@
 | municipality | string     | null: false |
 | block number | string     | null: false |
 | house_number | string     |             |
-| buy          | references | null: false ,foreign_key: true |
+| order        | references | null: false ,foreign_key: true |
 | phone_number | string     | null: false |
 
 ### Association
