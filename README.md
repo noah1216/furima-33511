@@ -79,4 +79,4 @@
 
 ### Association
 
-- belong_to :buy
+- belong_to :order
