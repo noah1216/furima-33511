@@ -8,7 +8,7 @@ class OrderAddress
     validates :area_id
     validates :municipality
     validates :block_number
-    validates :house_number
+    # validates :house_number
     validates :phone_number, format:{with:/\A\d{11}\z/}
     validates :order_id
     validates :user_id
@@ -16,8 +16,8 @@ class OrderAddress
   end
 
   def save
-    Order.create(user_id: user_id, item_id: item_id)
-    Address.create(postal_code: postal_code, area_id: area_id, municipality: municipality, house_number: house_number, block_number: block_number, phone_number: phone_number, order_id: order_id)
+    sum = Order.create(user_id: user_id, item_id: item_id)
+    Address.create(postal_code: postal_code, area_id: area_id, municipality: municipality, house_number: house_number, block_number: block_number, phone_number: phone_number, order_id: sum.id)
   end
 end
 
