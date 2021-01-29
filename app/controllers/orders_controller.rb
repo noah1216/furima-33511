@@ -1,12 +1,10 @@
 class OrdersController < ApplicationController
   before_action :item_find, only: [:index, :create]
   before_action :authenticate_user!, only: [:index, :create]
+  before_action :if_redirect, only: [:index, :create] 
 
   def index
     @order_address = OrderAddress.new
-      if current_user == @item.user || @item.order != nil
-        redirect_to root_path
-      end
   end
 
   def create
@@ -29,6 +27,12 @@ class OrdersController < ApplicationController
       card: order_params[:token],  
       currency: 'jpy'               
     )
+  end
+
+  def if_redirect
+    if current_user == @item.user || @item.order != nil
+      redirect_to root_path
+    end
   end
 
   def item_find
