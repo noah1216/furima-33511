@@ -5,7 +5,7 @@ FactoryBot.define do
     municipality { "浜田市" }
     block_number { "夕香の塔" }
     house_number { "309-11" }
-    phone_number { 11111111111 }
+    phone_number { "11111111111" }
     user_id {1}
     item_id {1}
     token {"tok_abcdefghijk00000000000000000"}
